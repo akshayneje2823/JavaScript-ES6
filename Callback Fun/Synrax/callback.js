@@ -4,9 +4,9 @@ let add = (a,b) => {
 let multi = (a,b) => {                                                                            
     return a*b                                                                                     
 };                                                                                                         
-let calaculate = (a,b,add) => {            /*  ==>  This add Function is nothing but callback Functio
+let calaculate = (a,b,callback) => {            /*  ==>  This add Function is nothing but callback Functio
                                                    because while invoking function we are passing function as Arguments*/                                                               
-    return add(a,b)                                                                                
+    return callback(a,b)                                                                                
 };                                                                                                            
                                                                                                            
 let output1 = calaculate(10,20,add)                                                                     
