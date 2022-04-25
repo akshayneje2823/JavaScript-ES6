@@ -1,6 +1,6 @@
 let goToMovie= (success,failure)=>{
-    let rs = 200;
-    if (rs>300) {
+    let money = 200;
+    if (money>300) {
         success("Go to Movie")
     } else {
         failure("go to pg")

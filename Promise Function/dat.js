@@ -1,32 +1,33 @@
-let employees = [{ id: 101, name: "Rahul", sal: 45000 },
-{ id: 102, name: "Sonia", sal: 55000 }
-]
+let employees = [{ "id": 1, "name": "Gearalt", "email": "geddowis0@cnet.com", "gender": "Male" },
+{ "id": 2, "name": "Brittany", "email": "bremnant1@rambler.ru", "gender": "Female" },
+{ "id": 3, "name": "Buddie", "email": "bmarfe2@desdev.cn", "gender": "Male" }];
+
 let createEmployee = (emp) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            let flag = true;
+            let number = true;
             employees.push(emp);
-            flag ? resolve("Successfully inserted") : reject("Failed - success")
-        }, 3000);
+            number ? resolve("Created Successfully..!") : reject("something is Wrong...!")
+        }, 3000) 
     });
-}
+};
 let getEmployee = () => {
     setTimeout(() => {
-        let rows = ""
-        employees.forEach((employee) => {
-            rows = rows + `<tr>
-                            <td>${employee.id}</td>
-                            <td>${employee.name}</td>
-                            <td>${employee.salary}</td>
-                           </tr>`
+        let rows = "";
+        employees.forEach(employee => {
+            rows += `<tr>
+            <td>${employee.id}</td>
+            <td>${employee.name}</td>
+            <td>${employee.email}</td>
+            <td>${employee.gender}</td>
+        </tr>`
         });
-        document.getElementById('hero').innerHTML = rows
-    }, 1000)
-    console.log("Get Method")
-}
-createEmployee({ id: 103, name: "Priyanka", sal: 65000 }).then((msg) => {
+        document.getElementById("namo").innerHTML = rows;
+    }, 1000); 
+createEmployee({ id: 3, name: "Robert", email: "robert@devda.com", gender: "male" })
+.then((msg) => {
     getEmployee();
-    console.log(msg)
-}).catch((err) => {
-    console.log(err)
+    console.log(msg);
+}).catch((err)=>{
+    console.error(err)
 })
