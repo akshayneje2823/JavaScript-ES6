@@ -6,7 +6,7 @@ class detail{
         console.log("This Is Constructor")
     }
     proto(){
-        console.log(`Your name is ${this.name} and age is ${this.age} and my id is${this.id} `)
+        console.log(`Your name is ${this.name} and age is ${this.age} and my id is ${this.id} `)
     }
 }
 var getDetails = new detail("Akshay",22,007)
