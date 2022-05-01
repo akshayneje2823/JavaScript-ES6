@@ -8,10 +8,11 @@ class detail{
         console.log(`I am from ${this.native} and mr name is ${this.name} i am ${this.age} years old`)
     }
     static StaticMethod(){
-        console.log("object")
+        console.log("This is Static Method")
     }
 }
 var getDetails = new detail("Akshay",22,"Mahrashtra")
 getDetails.proto()
 // getDetails.StaticMethod()    ==> it throws an error
-detail.StaticMethod()
+//  and also we dont need to make object while invoking static method
+detail.StaticMethod()  
