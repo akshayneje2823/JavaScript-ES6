@@ -15,6 +15,13 @@ class son extends father{
 class daughter extends son{
 
 }
+class boy extends daughter{
+    constructor(){
+        super();
+        console.log("Hello")
 
-let getFamily = new daughter();
+    }
+}
+
+let getFamily = new boy();
 getFamily.face()
