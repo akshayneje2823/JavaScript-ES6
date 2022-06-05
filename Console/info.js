@@ -1,1 +1,1 @@
-console.info("Helloo World")
+console.info("Hello World")

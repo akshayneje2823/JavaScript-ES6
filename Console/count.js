@@ -1,0 +1,6 @@
+// console.count()
+// console.count()
+console.count("myLabel")
+console.count("myLabel")
+console.count("")
+console.count("")
