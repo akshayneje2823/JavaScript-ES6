@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Part</title>
+</head>
+<body>
+    <marquee>Javascript Callback Example</marquee>
+    <p id="demo"></p>
+    <script>
+      async function getFile(){
+        let myPromise = new Promise(function(resolve){
+
+
+            let req = new XMLHttpRequest()
+            req.open('GET','myCAr.html');
+            req.onload = function(){
+                if (req.status == 200) {
+                    resolve(req.status)
+                } else {
+                    resolve("File Not Found")
+                }
+            }
+        })
+
+        
+        document.getElementById('demo').innerHTML = await myPromise
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>How to sort an array based on the length</h1>
+    <p id="ans"></p>
+    <p id="ans2"></p>
+    <h1 id="Hello"></h1>
+    <script>
+        arr = [];
+        arr[0] = "ab";
+        arr[1] = "abcdefgh";
+        arr[2] = "abcd";
+
+        // arr2 = [];
+        // arr2[0] = "ab";
+        // arr2[1] = "abcdefgh";
+        // arr2[2] = "abcd";
+
+        descendingArray = arr.sort((a, b) => { return b.length - a.length });
+        ascendingArray = arr.sort((a,b) => { return a.length - b.length})
+        document.getElementById('ans').innerHTML = descendingArray
+        document.getElementById('ans2').innerHTML = ascendingArray
+
+
+
+        const array = [2,5,9];
+        const index = array.indexOf(5);
+        if (index > -1) {
+            array.splice(index,1)
+        }
+        document.getElementById('Hello').innerHTML = array
+    </script>
+</body>
+
+</html>

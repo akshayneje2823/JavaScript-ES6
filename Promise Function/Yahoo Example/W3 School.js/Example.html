@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <h1>Javascript Promises</h1>
+    <p>Wait 4 seconds fro this page to change</p>
+    <h1 id="demo"></h1>
+    <script>
+        const mypromise = new Promise(function(resolve,reject){
+            setTimeout(function(){
+                resolve("This Is called promise")
+            },4000)
+        })
+
+        mypromise.then(function(value){
+            document.getElementById("demo").innerHTML = value
+        })
+        
+    </script>
+
+</body>
+</html>
