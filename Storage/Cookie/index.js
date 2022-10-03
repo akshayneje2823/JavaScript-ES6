@@ -1,0 +1,1 @@
+document.cookie = 'name=Rahul; expires=' + new Date(9999,0,1).toUTCString()
